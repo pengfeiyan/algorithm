@@ -1,5 +1,5 @@
 # coding = utf-8
-''' 算法复杂度为O(n^two) '''
+''' 算法复杂度为O(n^2) '''
 
 def selectionSort(arr,n):
     for i in range(n):
