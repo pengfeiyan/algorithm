@@ -19,15 +19,15 @@ def binarySearch(arr,n,target):
 
 def binarySearch1(arr,l,r,target):
     if l>r:
-        return -1
+        return False
     mid = l+(r-l)//2
     if arr[mid] == target:
         return mid
     if arr[mid] > target:
-        mid = binarySearch1(arr,l,mid-1,target)
+        return binarySearch1(arr,l,mid-1,target)
     else:
-        mid = binarySearch1(arr,mid+1,r,target)
-    return mid
+        return binarySearch1(arr,mid+1,r,target)
+
 
 arr = [1,2,3,4,5,6,7,8,9,10]
-print(binarySearch1(arr,0,len(arr)-1,10))
+print(binarySearch1(arr,0,len(arr)-1,1))

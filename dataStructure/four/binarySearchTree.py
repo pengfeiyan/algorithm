@@ -1,4 +1,6 @@
 # coding=utf-8
+import random,time
+
 class Node:
    def __init__(self,data):
        self.data = data
@@ -26,7 +28,7 @@ class BST:
                     node.left = item
                     return
                 node = node.left
-            if node.data < data:
+            elif node.data < data:
                 if node.right == None:
                     node.right = item
                     return
@@ -47,18 +49,48 @@ class BST:
         return False
 
 
-
-
-    def visit(self,root):
+    def preOrder(self,root):
         if root == None:
             return
         print(root.data)
-        self.visit(root.left)
-        self.visit(root.right)
+        self.preOrder(root.left)
+        self.preOrder(root.right)
+
+    def inOrder(self,root):
+        if root == None:
+            return
+        self.inOrder(root.left)
+        print(root.data)
+        self.inOrder(root.right)
+
+    '''内存回收，会使用后序遍历，将孩子节点删除，才能安全的删除父亲节点'''
+    def postOrder(self,root):
+        if root == None:
+            return
+        self.postOrder(root.left)
+        self.postOrder(root.right)
+        print(root.data)
+
+    def levelOrder(self,root):
+        queue = []
+        queue.append(root)
+        while queue:
+            node = queue.pop(0)
+            print(node.data)
+            if node.left:
+                queue.append(node.left)
+            if node.right:
+                queue.append(node.right)
+
+
 
 
 arr = [5,1,4,7,3,6,9,2,8]
 bst=BST()
 for i in arr:
     bst.insert(i)
-print(bst.search())
+
+bst.levelOrder(bst.root)
+
+
+

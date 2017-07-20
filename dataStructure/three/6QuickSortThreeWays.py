@@ -38,7 +38,7 @@ def __quickSort(arr,l,r):
     lt = l
     '''arr[gt...r]<v'''
     gt = r+1
-    '''arr[lt+1...i]==v'''
+    '''arr[lt+1...i)==v'''
     i = l+1
     while i<gt:
         if arr[i]<v:
@@ -55,44 +55,46 @@ def __quickSort(arr,l,r):
     __quickSort(arr,l,lt)
     __quickSort(arr,gt,r)
 
-def __quickSort(arr,l,r):
-    if l>=r:
-        return
-    rand = random.randint(l,r)
-    arr[l],arr[rand] = arr[rand],arr[l]
-    v = arr[l]
-    lt = l
-    gt = r+1
-    i=l+1
-    while i<gt:
-        if arr[i] < v:
-            arr[i],arr[lt+1] = arr[lt+1],arr[i]
-            lt+=1
-            i+=1
-        elif arr[i] > v:
-            arr[i],arr[gt-1] = arr[gt-1],arr[i]
-            gt-=1
-        else:
-            i+=1
-    arr[l],arr[lt] = arr[lt],arr[l]
-    lt-=1
-    __quickSort(arr,l,lt)
-    __quickSort(arr,gt,r)
+# def __quickSort(arr,l,r):
+#     if l>=r:
+#         return
+#     rand = random.randint(l,r)
+#     arr[l],arr[rand] = arr[rand],arr[l]
+#     v = arr[l]
+#     lt = l
+#     gt = r+1
+#     i=l+1
+#     while i<gt:
+#         if arr[i] < v:
+#             arr[i],arr[lt+1] = arr[lt+1],arr[i]
+#             lt+=1
+#             i+=1
+#         elif arr[i] > v:
+#             arr[i],arr[gt-1] = arr[gt-1],arr[i]
+#             gt-=1
+#         else:
+#             i+=1
+#     arr[l],arr[lt] = arr[lt],arr[l]
+#     lt-=1
+#     __quickSort(arr,l,lt)
+#     __quickSort(arr,gt,r)
 
-def __partition(arr,l,r):
-    rand = random.randint(l, r)
-    arr[l], arr[rand] = arr[rand], arr[l]
-    v = arr[l]
-    j = l
-    for i in range(l+1,r+1):
-        if arr[i] < v:
-            arr[j+1],arr[i] = arr[i],arr[j+1]
-            j+=1
-    arr[j],arr[l] = arr[l],arr[j]
-    return j
+'''三路快速排序不只返回一个，所以我们把它不另写成一个函数。'''
+# def __partition(arr,l,r):
+#     rand = random.randint(l, r)
+#     arr[l], arr[rand] = arr[rand], arr[l]
+#     v = arr[l]
+#     j = l
+#     for i in range(l+1,r+1):
+#         if arr[i] < v:
+#             arr[j+1],arr[i] = arr[i],arr[j+1]
+#             j+=1
+#     arr[j],arr[l] = arr[l],arr[j]
+#     return j
 
 start = time.time()
-arr = generateRandomArray(10,0,100)
-quickSort(arr,len(arr))
+arr = generateRandomArray(100000, 0, 100000)
+quickSort(arr, len(arr))
 print(arr)
 print(time.time()-start)
+
