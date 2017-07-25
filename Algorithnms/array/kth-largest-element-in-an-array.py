@@ -29,7 +29,6 @@ class Solution(object):
         nums[j],nums[l] = nums[l],nums[j]
         return j
 
-
 sol = Solution()
 nums = [6,3,5,2,0,9,7,4,1]
 p = sol.findKthLargest(nums,8)
