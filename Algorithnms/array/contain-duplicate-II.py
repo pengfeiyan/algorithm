@@ -17,7 +17,6 @@ class Solution(object):
             dic[value] = index
         return False
 
-
 sol = Solution()
 nums = [1,0,1,0,3]
 print(sol.containsNearbyDuplicate(nums,1))

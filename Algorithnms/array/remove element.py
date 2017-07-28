@@ -18,5 +18,5 @@ class Solution(object):
         # print(nums[0:k],k)
         return k
 sol = Solution()
-arr = [3,2,2,3]
-sol.removeElement(arr,0)
+arr = [3,4]
+print(arr[0:sol.removeElement(arr,4)])

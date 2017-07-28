@@ -8,16 +8,17 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        global arr
-        arr = list(set(nums))
-        # k = 0
-        # for i in range(1,len(nums)):
-        #     if nums[k] != nums[i]:
-        #         k += 1
-        #         nums[k] = nums[i]
-        #     else:
-        #         continue
-        # return k+1
+        if not nums:
+            return None
+        else:
+            k = 0
+            for i in range(1,len(nums)):
+                if nums[i] != nums[k]:
+                    k+=1
+                    nums[k] = nums[i]
+                else:
+                    continue
+            return k+1
 
 sol = Solution()
 arr = [1,1,2]
