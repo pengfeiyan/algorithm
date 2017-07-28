@@ -1,3 +1,4 @@
+'''快速排序的应用'''
 # coding = utf-8
 import random
 class Solution(object):

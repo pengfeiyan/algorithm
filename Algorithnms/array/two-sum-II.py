@@ -8,7 +8,6 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        '''遍历i，在（i...]利用二分查找，target-nums[i]的值，时间复杂度是nlogn'''
         i,j = 0,len(numbers)-1
         arr = []
         while i < j:

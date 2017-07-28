@@ -1,6 +1,6 @@
 # coding=utf-8
 import random
-''' leetcode 75'''
+''' leetcode 75 计数排序'''
 
 class Solution(object):
     def sortColors(self, nums):

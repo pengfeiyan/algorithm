@@ -1,6 +1,5 @@
 # coding=utf-8
-
-'''leetcode 3'''
+'''leetcode 3 滑动窗口'''
 
 class Solution(object):
     def lengthOfLongestSubstring(self, s):
@@ -20,12 +19,11 @@ class Solution(object):
                     while s[r] in s[l:r]:
                         l += 1
                     res = max(res,r-l+1)
-
             else:
                 return res
         return res
 
 sol = Solution()
 a = '0123456'
-s = ''
+s = 'abccdef'
 print(sol.lengthOfLongestSubstring(s))

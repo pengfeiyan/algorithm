@@ -1,5 +1,5 @@
 # coding = utf-8
-
+'''归并排序的应用'''
 class Solution(object):
     def merge(self, nums1, m, nums2, n):
         """

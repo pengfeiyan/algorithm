@@ -1,5 +1,5 @@
 # coding=utf-8
-'''leetcode 209'''
+'''leetcode 209 滑动窗口'''
 
 class Solution(object):
     def minSubArrayLen(self, s, nums):
@@ -28,6 +28,6 @@ class Solution(object):
 
 sol = Solution()
 arr = [2,3,1,2,4,3]
-s = 7
+s = 8
 print(sol.minSubArrayLen(s,arr))
 

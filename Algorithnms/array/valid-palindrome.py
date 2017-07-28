@@ -1,6 +1,6 @@
 # coding = utf-8
 
-'''leetcode 125'''
+'''leetcode 125 对撞指针'''
 
 class Solution(object):
     def isPalindrome(self, s):
