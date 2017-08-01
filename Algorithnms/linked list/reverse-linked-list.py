@@ -15,7 +15,7 @@ class Solution(object):
             maxs,mins = m,n
         else:
             maxs,mins = n,m
-        
+
 
 
 
