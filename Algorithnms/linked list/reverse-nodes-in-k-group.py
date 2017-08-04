@@ -1,3 +1,5 @@
+'''未完成'''
+'''leetcode 25'''
 from dataStruct.single_link_list import *
 # Definition for singly-linked list.
 # class ListNode(object):
