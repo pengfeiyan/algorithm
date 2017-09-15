@@ -19,4 +19,4 @@ class Solution(object):
         return k
 sol = Solution()
 arr = [3,4]
-print(arr[0:sol.removeElement(arr,4)])
+print(arr[0:sol.removeElement(arr,3)])
